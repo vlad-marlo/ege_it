@@ -10,7 +10,7 @@
 
 Напишите номер слова ХУХХ
 """
-LETTERS = 'А М У Х'.strip().split()
+LETTERS = 'У О А'.strip().split()
 counter = 0
 
 
@@ -19,9 +19,9 @@ def gen_string(count, prefix):
         global counter
         counter += 1
         return print(counter, prefix)
-    for i in range(4):
+    for i in range(len(LETTERS)):
         gen_string(count - 1, prefix + LETTERS[i])
 
-default_counter = 4
+default_counter = 5
 gen_string(default_counter, '')
 
